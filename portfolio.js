@@ -1,0 +1,1 @@
+const selector=document.querySelector('#kind');selector.addEventListener('change',()=>{let count=0;document.querySelectorAll('.project').forEach(p=>{p.hidden=selector.value!=='all'&&p.dataset.kind!==selector.value;if(!p.hidden)count++});document.querySelector('#count').textContent=count+' 项作品'});

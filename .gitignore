@@ -1,0 +1,8 @@
+.env
+.env.*
+__pycache__/
+*.log
+node_modules/
+outputs/
+.DS_Store
+Thumbs.db
