@@ -37,3 +37,14 @@ python tools/build.py --check
 ```
 
 PDF 使用确定性生成；`--check` 在临时目录重建并检查四个生成文件是否与提交版本一致。修改描述后请提交 JSON 及生成结果，避免网站和 PDF 口径漂移。工具无联网请求，无私人路径；字体使用 ReportLab 内置 CID 字体。
+
+
+## 浏览体验
+
+网站支持关键词搜索、已有作品/独立演示筛选及三条一键阅读路线。筛选条件保存到链接中，刷新仍可恢复；没有匹配时提供清除提示。每个作品的“定位此作品”链接可直达并展开贡献与边界。所有作品在无 JavaScript 时仍可阅读。
+
+- [AI 产品与规则工程](https://willow-tokoton-hitorineko.github.io/research-portfolio/?route=product#projects)
+- [金融研究与数据方法](https://willow-tokoton-hitorineko.github.io/research-portfolio/?route=research#projects)
+- [工具交付与人工复核](https://willow-tokoton-hitorineko.github.io/research-portfolio/?route=tools#projects)
+
+`tools/portfolio.js` 是交互脚本源文件，构建时同步到根目录。真实浏览器验证搜索空结果、路线切换、链接刷新恢复和项目直达；生成文件通过一致性检查。查询词在页面 URL 中，分享前请使用公开关键词；站点不存储访客筛选记录。
